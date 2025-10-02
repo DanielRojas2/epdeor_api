@@ -37,6 +37,7 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'apis.archivos',
+    'apis.almacen',
 ]
 
 THIRD_APPS = [
