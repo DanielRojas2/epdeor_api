@@ -1,0 +1,12 @@
+################################################################
+
+1. Corregir la lógica de creación de los tomos y archivos
+   para que no exista el error de PKs.
+
+2. Generar los serializers y los endpoints para los reportes
+   y creación de tomos y detalle de tomos. 
+
+3. Generar los endpoints de tomos y detalle de tomos.
+
+4. Generar un endpoint para la descarga vía QR de los archivos
+   dentro de los tomos.
