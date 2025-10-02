@@ -11,4 +11,4 @@ class Nivel(models.Model):
         verbose_name_plural = 'Niveles'
         
     def __str__(self):
-        return self.nro_nivel
+        return f"{self.nro_nivel}"
