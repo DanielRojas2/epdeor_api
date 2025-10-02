@@ -4,7 +4,7 @@ from ..models.DetalleTomo import DetalleTomo
 from ..models.Tomo import Tomo
 
 class DetalleTomoReporteSerializer(serializers.ModelSerializer):
-    qr = serializers.SerializerMethodField()
+    qr_url = serializers.SerializerMethodField()
 
     class Meta:
         model = DetalleTomo
@@ -24,7 +24,7 @@ class DetalleTomoReporteSerializer(serializers.ModelSerializer):
         if request and obj.archivo:
             return request.build_absolute_uri(
                 reverse(
-                    "tomos-generar-qr",
+                    "tomos-reportes-generar-qr",
                     kwargs={
                         "pk": obj.tomo.pk,
                         "nombre_archivo": obj.nombre_archivo
