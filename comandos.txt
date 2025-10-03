@@ -1,0 +1,4 @@
+python manage.py poblar_departamentos "apis\usuarios\fixtures\departamentos.json"
+python manage.py poblar_unidades "apis\usuarios\fixtures\unidades.json"
+python manage.py poblar_puestos "apis\usuarios\fixtures\puestos.json"
+python manage.py crear_roles

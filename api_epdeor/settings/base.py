@@ -38,6 +38,8 @@ BASE_APPS = [
 LOCAL_APPS = [
     'apis.archivos',
     'apis.almacen',
+    'apis.inventario',
+    'apis.usuarios',
 ]
 
 THIRD_APPS = [
