@@ -4,4 +4,5 @@ psycopg2
 pillow
 django-cors-headers
 djangorestframework-simplejwt
+drf-yasg
 qrcode[pil]
