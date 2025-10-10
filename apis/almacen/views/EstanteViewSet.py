@@ -3,9 +3,9 @@ from ..models.Estante import Estante
 from ..serializers.EstanteSerializer import EstanteSerializer
 
 class EstanteViewSet(viewsets.ModelViewSet):
-    queryset = Estante
+    queryset = Estante.objects.all()
     serializer_class = EstanteSerializer
     
 class ReporteEstanteViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Estante
+    queryset = Estante.objects.all()
     serializer_class = EstanteSerializer
