@@ -12,5 +12,12 @@ class Estante(models.Model):
         verbose_name = 'Estante'
         verbose_name_plural = 'Estantes'
         
+        constraints = [
+            models.UniqueConstraint(
+                fields=['nro_estante', 'almacen'],
+                name='unique_estante_almacen'
+            )
+        ]
+        
     def __str__(self):
         return f"{self.nro_estante} - {self.almacen}"

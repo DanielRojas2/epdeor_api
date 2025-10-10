@@ -24,7 +24,7 @@ class TomoReporteSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = fields
 
-class EstanteNivelSerializer(serializers.ModelSerializer):
+class EstanteNivelReporteSerializer(serializers.ModelSerializer):
     class Meta:
         model = EstanteNivel
         fields = [
@@ -36,7 +36,7 @@ class EstanteNivelSerializer(serializers.ModelSerializer):
 
 class ReporteInventarioArchviosSerializer(serializers.ModelSerializer):
     tomo = TomoReporteSerializer(read_only=True)
-    nivel_estante = EstanteNivelSerializer(read_only=True)
+    nivel_estante = EstanteNivelReporteSerializer(read_only=True)
     class Meta:
         model = InventarioArchivos
         fields = [
