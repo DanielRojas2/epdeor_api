@@ -1,4 +1,5 @@
 import re
+from datetime import date
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
@@ -18,12 +19,18 @@ class PerfilUsuario(models.Model):
         max_length=7, blank=False, null=False,
     )
     alta = models.DateField(auto_now_add=True)
-    baja = models.DateField(blank=True, null=True)
+    baja = models.DateField(blank=True, null=True, default=None)
     estado = models.BooleanField(default=True)
     puesto = models.ForeignKey(Puesto, on_delete=models.CASCADE)
     usuario = models.OneToOneField(
         User, on_delete=models.CASCADE, null=True, blank=True
     )
+
+    def save(self, *args, **kwargs):
+        if not self.baja:
+            hoy = date.today()
+            self.baja = date(hoy.year + 1, 1, 10)
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Perfil de Usuario"

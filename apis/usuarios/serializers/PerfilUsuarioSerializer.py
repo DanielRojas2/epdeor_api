@@ -10,6 +10,7 @@ class PerfilUsuarioReporteSerializer(serializers.ModelSerializer):
     class Meta:
         model = PerfilUsuario
         fields = [
+            'id',
             'nombre',
             'apellido_paterno',
             'apellido_materno',
@@ -27,11 +28,13 @@ class PerfilUsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = PerfilUsuario
         fields = [
+            'id',
             'nombre',
             'apellido_paterno',
             'apellido_materno',
             'ci',
             'alta',
             'baja',
+            'estado',
             'puesto',
         ]

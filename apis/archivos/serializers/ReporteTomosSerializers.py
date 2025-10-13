@@ -9,6 +9,7 @@ class DetalleTomoReporteSerializer(serializers.ModelSerializer):
     class Meta:
         model = DetalleTomo
         fields = [
+            'id',
             'nro_archivo',
             'nombre_archivo',
             'archivo',
@@ -41,6 +42,7 @@ class TomoConDetalleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tomo
         fields = [
+            'id',
             'nro_tomo',
             'titulo',
             'glosa',

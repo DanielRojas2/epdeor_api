@@ -19,9 +19,6 @@ def actualizar_estado_usuario(sender, instance, **kwargs):
     hoy = now().date()
     if instance.baja and instance.baja < hoy:
         instance.estado = False
-    else:
-        instance.estado = True
-
 
 @receiver(post_save, sender=PerfilUsuario)
 def crear_usuario_actualizar_usuario(sender, instance, created, **kwargs):
@@ -46,7 +43,7 @@ def crear_usuario_actualizar_usuario(sender, instance, created, **kwargs):
         user.is_active = instance.estado
         user.first_name = instance.nombre
         user.last_name = instance.apellido_paterno
-        user.save()
+        user.save(update_fields=["is_active", "first_name", "last_name"])
 
     UNIDAD_A_GRUPO = {
         "Activos Fijos y Almacenes": "Encargado de almacenes",
