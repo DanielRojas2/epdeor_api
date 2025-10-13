@@ -42,6 +42,7 @@ urlpatterns = [
     path('almacen/', include('apis.almacen.urls')),
     path('archivos/', include('apis.archivos.urls')),
     path('inventario/', include('apis.inventario.urls')),
+    path('solicitudes/', include('apis.solicitudes.urls')),
     path('usuarios/', include('apis.usuarios.urls')),
 
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),

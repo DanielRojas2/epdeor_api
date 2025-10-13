@@ -40,6 +40,7 @@ LOCAL_APPS = [
     'apis.archivos',
     'apis.almacen',
     'apis.inventario',
+    'apis.solicitudes',
     'apis.usuarios',
 ]
 
